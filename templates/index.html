@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>collage details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#56baed">
+<!--===============================================================================================-->	
+	<link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+<!--===============================================================================================-->
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}"/>
+
+<!--===============================================================================================-->
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}"/>
+<!--===============================================================================================-->
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css') }}"/>
+<!--===============================================================================================-->
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css') }}"/>
+<!--===============================================================================================-->
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/perfect-scrollbar/perfect-scrollbar.css') }}"/>
+<!--===============================================================================================-->
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}"/>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"/>
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100" >
+				
+				<div class="table100 ver1 m-b-110">
+					<div class="table100-head">
+						<table>
+							<thead>
+								<tr class="row100 head">
+									<th class="cell100 column1">Round No</th>
+									<th class="cell100 column2">Institute Name</th>
+									<th class="cell100 column3">Branch Name</th>
+									<th class="cell100 column4">Allotted Quota</th>
+									<th class="cell100 column5">Category</th>
+									<th class="cell100 column5">Seat Pool</th>
+									<th class="cell100 column5">Openning Rank</th>
+									<th class="cell100 column5">Closing Rank</th>
+								</tr>
+							</thead>
+						</table>
+					</div>
+
+					<div class="table100-body js-pscroll">
+						<table>
+							<tbody>
+								<tr class="row100 body">
+									<td class="cell100 column1"></td>
+									<td class="cell100 column2"></td>
+									<td class="cell100 column3"></td>
+									<td class="cell100 column4"></td>
+									<td class="cell100 column5"></td>
+									<td class="cell100 column6"></td>
+									<td class="cell100 column7"></td>
+									<td class="cell100 column8"></td>
+								</tr>
+								{% for item in items %}
+
+								<tr class="row100 body">
+									<td class="cell100 column1">{{item[0]}}</td>
+									<td class="cell100 column2">{{item[1]}}</td>
+									<td class="cell100 column3">{{item[2]}}</td>
+									<td class="cell100 column4">{{item[3]}}</td>
+									<td class="cell100 column5">{{item[4]}}</td>
+									<td class="cell100 column6">{{item[5]}}</td>
+									<td class="cell100 column7">{{item[6]}}</td>
+									<td class="cell100 column8">{{item[7]}}</td>
+								</tr>
+								{% endfor %}
+								{% if session.len %}
+
+								<tr class="row100 body">
+									<td class="cell100 column1"></td>
+									<td class="cell100 column2"></td>
+									<td class="cell100 column3"></td>
+									<td class="cell100 column4"></td>
+									<td class="cell100 column5"></td>
+									<td class="cell100 column6"></td>
+									<td class="cell100 column7"></td>
+									<td class="cell100 column8"></td>
+								</tr>
+
+								<tr class="row100 body">
+									<td class="cell100 column1">SORRY</td>
+									<td class="cell100 column2">YOU ARE</td>
+									<td class="cell100 column3">NOT</td>
+									<td class="cell100 column4">GETING</td>
+									<td class="cell100 column5">ADMISSION</td>
+									<td class="cell100 column6">IN</td>
+									<td class="cell100 column7">ANY</td>
+									<td class="cell100 column8">COLLAGE</td>
+								</tr>
+								{% endif %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+				
+			
+			</div>
+		</div>
+	</div>
+
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script>
+		$('.js-pscroll').each(function(){
+			var ps = new PerfectScrollbar(this);
+
+			$(window).on('resize', function(){
+				ps.update();
+			})
+		});
+			
+		
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ENTER DETAILS</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/s.css') }}"/>
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h1>ENTER YOUR DETAILS</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/ins2019" method="post">
+      <label for="collage" class="fadeIn third"><h5 style="padding-right:282px;  margin-block-start: 0.33em; margin-block-end:0.03em;"> Choose INSTITUTE:</h5></label>
+      <div>
+        
+        <datalist id="suggestions">
+          {% for item in items%}
+              <option value="{{item}}" >{{item}}</option>
+          {% endfor%}
+            </datalist>
+          
+          <input  autoComplete="on" list="suggestions"/ style="width: 400px;text-align-last:  center;" id="suggestions" name ="suggestions"> 
+      </div>
+
+
+
+      <label for="collage" class="fadeIn third"><h5 style="padding-right:271px;  margin-block-start: 0.33em; margin-block-end:0.03em;"> Choose ROUND NO.:</h5></label>
+      <div>
+        <select id="ROUND" name="ROUND" style="width: 400px;text-align-last:  center;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+      </div>
+
+
+
+
+      <label for="Category" class="fadeIn third" > <h5 style="padding-right:280px;  margin-block-start: 0.33em; margin-block-end:0.03em;"> Choose Category:</h5></label>
+      <div>
+        <select id="Category" name="Category" style="width: 400px;text-align-last:  center;">
+            <option value="OPEN" >OPEN</option>
+            <option value="GEN-EWS">GEN-EWS</option>
+            <option value="OBC-NCL">OBC-NCL</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+      </div>
+
+      <label for="GENDER" class="fadeIn third"><h5 style="padding-right:290px;  margin-block-start: 0.73em; margin-block-end:0.03em;"> Choose GENDER:</h5></label>
+      <div>
+        <select id="GENDER" name="GENDER" style="width: 400px;text-align-last:  center;">
+            <option value="Gender-Neutral" >Gender-Neutral</option>
+            <option value="Female-Only">Female-Only</option>
+        </select>
+      </div>
+
+
+
+      <input type="submit" class="fadeIn fourth" value="GET collage DETAILS" style="margin-block-start: 2.33em;">
+    </form>
+    <div id="formFooter">
+      <h6 style="display: block;margin-block-end:0em; float: left;">Made by</h6>
+      <h6 style="display: block;margin-block-end:0em;float: right; padding-right: 75px;">INSTA ID</h6>
+      <br>
+      <br>
+      <a href="https://www.instagram.com/_kumarmohit_/" target="_blank" style="float: left;">KUMAR MOHIT</a>
+      <a href="https://www.instagram.com/_kumarmohit_/" target="_blank" style="float: right;">_kumarmohit_</a>
+    </div>
+    <div id="formFooter">
+      
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

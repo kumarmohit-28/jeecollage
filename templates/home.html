@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> ENTER DETAILS</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/s.css') }}"/>
+
+
+<div class="wrapper fadeInDown" style="flex-direction: row;">
+  <div style="padding-right: 100px;">
+    <a href="/link">
+  <img src="{{ url_for('static', filename='img/poster.png') }}" width="350px;" height="450px;">
+</a>
+</div>
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <h1>CHOOSE ONE</h1>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/" method="post">
+      <h4 style="margin-block-end:0.33em;">PREDICTION ON BASIS OF 2019 RESULTS</h4>
+      <a href="/rank2019">BY YOUR RANK</a> <br>
+      <a href="/ins2019">PARTICULAR INSTITUTE</a>
+
+      <h6 style="margin-block-start:3.33em; margin-block-end:0em;">(COMING SOON)</h6>
+      <h4 style="margin-block-end:0.33em;margin-block-start:0em;">2020 COUNSELING RESULTS</h4>
+      <a href="/2020rank">BY YOUR RANK</a> <br>
+      <a href="/2020ins" style="margin-block-end:2.33em;">PARTICULAR INSTITUTE</a>
+    </form>
+    <div id="formFooter">
+      <h6 style="display: block;margin-block-end:0em; float: left;">Made by</h6>
+      <h6 style="display: block;margin-block-end:0em;float: right; padding-right: 75px;">INSTA ID</h6>
+      <br>
+      <br>
+      <a href="https://www.instagram.com/_kumarmohit_/" target="_blank" style="float: left;">KUMAR MOHIT</a>
+      <a href="https://www.instagram.com/_kumarmohit_/" target="_blank" style="float: right;">_kumarmohit_</a>
+    </div>
+    <div id="formFooter">
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
