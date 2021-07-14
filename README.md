@@ -1,3 +1,6 @@
 # jeecollage
-A simple and fast website to give a list of colleges based on the students rank in JEE based on the results of 2019.
+
+A simple and fast website to give a list of colleges based on the students rank in JEE based on the previous year results.
+
+
 website link: http://jeecollage.pythonanywhere.com/
